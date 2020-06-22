@@ -1,5 +1,8 @@
 import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE,SWITCH_MODAL } from './actionTypes'
+import { ADD_RESERVED_AMOUNT, ADD_CONTACT_INFO, SWITCH_RESERVATION_MODAL} from './actionTypes'
 import { v4 as uuidv4 } from 'uuid';
+
+/* Creating event */
 
 export const addEvent = (eventData) => (    
     {
@@ -43,6 +46,39 @@ export const switchModal = (modal) => (
         type: SWITCH_MODAL,
         payload: {
             modal
+        }
+    }
+)
+
+/* Reservations */
+
+export const addReservedAmount = (reservedAmountData) => (
+    {
+        type: ADD_RESERVED_AMOUNT,
+        payload: {
+            ticketTypeId = reservedAmountData.ticketTypeId,
+            amount = reservedAmountData.amount            
+        }
+    }
+)
+
+export const addContactInfo = (contactInfoData) => (
+    {
+        type: ADD_CONTACT_INFO,
+        payload: {
+            firstName = contactInfoData.firstName,
+            lastName = contactInfoData.lastName,
+            email = contactInfoData.email,
+            phoneNumber = contactInfoData.phoneNumber
+        }
+    }
+)
+
+export const switchReservationModal = (visibleReservationModal) => (
+    {
+        type: SWITCH_RESERVATION_MODAL,
+        payload: {
+            visibleReservationModal
         }
     }
 )
