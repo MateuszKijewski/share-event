@@ -1,8 +1,7 @@
-import { ADD_EVENT, ADD_TICKET_TYPE, SWITCH_MODAL } from './actionTypes'
+import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE, SWITCH_MODAL } from './actionTypes'
 import { EVENT, TICKET_TYPE, EVENT_LINK} from './actionTypes'
 
 const initialEventState = {
-    //eventFormActive: true,
     event: {
         id: '',
         name: '',
@@ -37,7 +36,6 @@ export const eventReducer = (state = initialEventState, action) => {
 }
 
 const initialTicketTypesState = {
-    //ticketTypeFormActive: false,
     ticketTypes: []
 }
 
@@ -58,6 +56,15 @@ export const ticketTypeReducer = (state = initialTicketTypesState, action) => {
                     ticketTypes: [...state.ticketTypes, newTicketType]                   
                 }
             )
+        
+        case DELETE_TICKET_TYPE:
+            return (
+                {
+                    ...state,
+                    ticketTypes: state.ticketTypes.filter((ticketType) => ticketType.id !== action.payload.id )
+                }
+            )
+
         default:
             return state;
     }

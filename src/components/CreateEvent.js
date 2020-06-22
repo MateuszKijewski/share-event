@@ -18,7 +18,7 @@ function CreateEvent({addEvent, switchModal}) {
     return (
         <div className={'container w-75 mt-5'}>
             <div className={"card mb-2"}>
-			<div className={"card-header"}><b>Create your event</b></div>
+			<div className={"card-header text-center"}><b>Create your event</b></div>
 			<div className={'card-body'}>
                 <div className={'form-group'}>
                     <label>Name</label>
@@ -36,7 +36,7 @@ function CreateEvent({addEvent, switchModal}) {
                     </div>
                 </div>
 			</div>
-            <div className={'card-footer text-muted'}>first step</div>
+            <div className={'card-footer text-muted text-center'}>1/3</div>
 		    </div>
         </div>
     )

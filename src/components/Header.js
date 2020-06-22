@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 
-function Header({visibleModal}) {
+function Header({visibleModal, id}) {
     const getActive = (stepName) => {
         if (stepName === visibleModal){
             return 'md-step active'
@@ -13,8 +13,8 @@ function Header({visibleModal}) {
     return (     
         <div>
                 <div className={"text-center"} id={"changeText"}>
-                    <img src={'https://www.freelogodesign.org/file/app/client/thumb/563628fe-1222-40b6-899f-aa32dafdbf2c_200x200.png?1592668203939'}></img>
-                    <h2><span className={"headerActionsSpan"}>Create, share, define, spread</span> your events!</h2>
+                    <img src={'https://www.freelogodesign.org/file/app/client/thumb/47e3ce42-318a-475e-ad46-581d80361e48_200x200.png?1592753436649'}></img>
+                    <h2><span className={"headerActionsSpan"}>Create, define, spread, share </span> your events!</h2>
                 </div>
                 <div className={"md-stepper-horizontal orange"}>
                     <div className={getActive('event')}>
@@ -36,6 +36,7 @@ function Header({visibleModal}) {
                         <div className={"md-step-bar-right"}></div>
                     </div>
                 </div>
+                {id}
         </div>
     )
 }

@@ -11,7 +11,7 @@ body {
 }
 /* Header */
 .headerActionsSpan {
-    color: #ff8348;
+    color: #0069d9;
 }
 
 /* forms */
@@ -27,9 +27,13 @@ body {
     height: 50px;
     width: 180px; 
 }
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #ff8348 !important;
+.expandButton, .deleteButton {
+	float: right;
+	margin-left: 5px;
 }
+/* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #ff8348 !important;
+} */
 
 /* Stepper */
 .md-stepper-horizontal {
@@ -82,7 +86,7 @@ body {
 	background-color:#00AE4D;
 }
 .md-stepper-horizontal.orange .md-step.active .md-step-circle {
-	background-color:#ff8348;
+	background-color:#0069d9;
 }
 .md-stepper-horizontal .md-step.active .md-step-circle {
 	background-color: rgb(33,150,243);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import TicketTypesContainer from './TicketTypesContainer'
 
-function CreateTicketTypes({eventId, addTicketType, switchModal}) {
+function CreateTicketTypes({eventId, addTicketType, deleteTicketType, switchModal, ticketTypes}) {
     const [allValues, setAllValues] = useState({
         name: '',
         description: '',
@@ -16,9 +17,11 @@ function CreateTicketTypes({eventId, addTicketType, switchModal}) {
     }
     
     return (
+        <React.StrictMode>
+        <TicketTypesContainer ticketTypes={ticketTypes} deleteTicketType={deleteTicketType} />
         <div className={'container w-75 mt-5'}>
             <div className={"card mb-2"}>
-			<div className={"card-header"}><b>Create your event</b></div>
+			<div className={"card-header text-center"}><b>Define ticket types</b></div>
 			<div className={'card-body'}>
                 <div className={'form-group'}>
                     <label>Name</label>
@@ -31,13 +34,14 @@ function CreateTicketTypes({eventId, addTicketType, switchModal}) {
                     <input type='number' name="numberAvailable" className={'form-control'} onChange={changeHandler}/>
                     <div className={'text-center mt-5'}>
                         <button className={'btn btn-primary addButton'} onClick={() => {addTicketType(allValues)}}><b>Add ticket type</b></button><br/>
-                        <button className={'btn btn-primary proceedButton mt-3'} onClick={() => {addTicketType(allValues)}}><b>Proceed</b></button>
+                        <button className={'btn btn-primary proceedButton mt-3'} onClick={() => {switchModal('event_link')}}><b>Proceed</b></button>
                     </div>
                 </div>
 			</div>
-            <div className={'card-footer text-muted'}>first step</div>
+            <div className={'card-footer text-muted text-center'}>2/3</div>
 		    </div>
         </div>
+        </React.StrictMode>
     )
 }
 

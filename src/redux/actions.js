@@ -1,4 +1,4 @@
-import { ADD_EVENT, ADD_TICKET_TYPE, SWITCH_MODAL } from './actionTypes'
+import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE,SWITCH_MODAL } from './actionTypes'
 import { v4 as uuidv4 } from 'uuid';
 
 export const addEvent = (eventData) => (    
@@ -24,7 +24,16 @@ export const addTicketType = (ticketTypeData) => (
             description: ticketTypeData.description,
             price: ticketTypeData.price,
             numberAvailable: ticketTypeData.numberAvailable,
-            eventId: ticketTypeData.eventId
+            eventId: ticketTypeData.eventId,
+        }
+    }
+)
+
+export const deleteTicketType = (id) => (
+    {
+        type: DELETE_TICKET_TYPE,
+        payload: {
+            id
         }
     }
 )

@@ -1,5 +1,6 @@
 export const ADD_EVENT = 'ADD_EVENT'
 export const ADD_TICKET_TYPE = 'ADD_TICKET_TYPE'
+export const DELETE_TICKET_TYPE = 'DELETE_TICKET_TYPE'
 export const GENERATE_LINK = 'GENERATE_LINK'
 export const SWITCH_MODAL = 'SWITCH_MODAL'
 
