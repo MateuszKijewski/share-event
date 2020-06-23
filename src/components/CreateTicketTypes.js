@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TicketTypesContainer from './TicketTypesContainer'
 
-function CreateTicketTypes({eventId, addTicketType, deleteTicketType, switchModal, ticketTypes}) {
+function CreateTicketTypes({eventId, addTicketType, deleteTicketType, switchModal, ticketTypes, event, apiCreateEvent}) {
     const [allValues, setAllValues] = useState({
         name: '',
         description: '',
@@ -34,7 +34,7 @@ function CreateTicketTypes({eventId, addTicketType, deleteTicketType, switchModa
                     <input type='number' name="numberAvailable" className={'form-control'} onChange={changeHandler}/>
                     <div className={'text-center mt-5'}>
                         <button className={'btn btn-primary addButton'} onClick={() => {addTicketType(allValues)}}><b>Add ticket type</b></button><br/>
-                        <button className={'btn btn-primary proceedButton mt-3'} onClick={() => {switchModal('event_link')}}><b>Proceed</b></button>
+                        <button className={'btn btn-primary proceedButton mt-3'} onClick={() => {apiCreateEvent(event, ticketTypes); switchModal('event_link')}}><b>Proceed</b></button>
                     </div>
                 </div>
 			</div>

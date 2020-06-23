@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import CreateEvent from './CreateEvent'
 import CreateTicketTypes from './CreateTicketTypes'
 import SharedLink from './SharedLink'
-import { addEvent, addTicketType, switchModal, deleteTicketType } from '../redux/actions'
+import { addEvent, addTicketType, switchModal, deleteTicketType, apiCreateEvent } from '../redux/actions'
 
-function ModalContainer({event, visibleModal, ticketTypes, addEvent, addTicketType, deleteTicketType, switchModal}) {
+function ModalContainer({event, visibleModal, ticketTypes, addEvent, addTicketType, deleteTicketType, switchModal, apiCreateEvent, apiResponses}) {
     const renderModal = () => {
         switch(visibleModal){
           case 'event':
@@ -21,6 +21,8 @@ function ModalContainer({event, visibleModal, ticketTypes, addEvent, addTicketTy
                 deleteTicketType={deleteTicketType}
                 switchModal={switchModal}
                 ticketTypes={ticketTypes}
+                event={event}
+                apiCreateEvent={apiCreateEvent}
               />
           
           case 'event_link':
@@ -44,7 +46,8 @@ const mapStateToProps = (state) => {
     return {
         visibleModal: state.visibleModalReducer.visibleModal,
         event: state.eventReducer.event,
-        ticketTypes: state.ticketTypeReducer.ticketTypes
+        ticketTypes: state.ticketTypeReducer.ticketTypes,
+        apiResponses: state.apiCreateEventReducer.apiResponses
     }
 }
 
@@ -52,7 +55,8 @@ const mapDispatchToProps = (dispatch) => ({
     addEvent: (eventData) => {dispatch(addEvent(eventData))},
     addTicketType: (ticketTypeData) => {dispatch(addTicketType(ticketTypeData))},
     deleteTicketType: (id) => {dispatch(deleteTicketType(id))},
-    switchModal: (modal) => {dispatch(switchModal(modal))}
+    switchModal: (modal) => {dispatch(switchModal(modal))},
+    apiCreateEvent: (eventData, ticketTypeArray) => {dispatch(apiCreateEvent(eventData, ticketTypeArray))}
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalContainer)

@@ -2,6 +2,33 @@ import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE, SWITCH_MODAL } from './
 import { EVENT } from './actionTypes'
 import { ADD_RESERVED_AMOUNT, ADD_CONTACT_INFO, SWITCH_RESERVATION_MODAL} from './actionTypes'
 import { RESERVATION } from './actionTypes'
+import { API_CREATE_EVENT } from './actionTypes'
+
+/* API calls */
+const initialResponseState = {
+    apiResponses: {
+        createEventResponse: {},
+        createTicketResponses: []
+    }
+}
+
+export const apiCreateEventReducer = (state = initialResponseState, action) => {
+    switch(action.type){
+        case API_CREATE_EVENT:
+            return (
+                {
+                    ...state,
+                    apiResponses: {
+                        createEventResponse: action.payload.createEventResponse,
+                        createTicketResponses: action.payload.createTicketResponses
+                    }
+                }
+            )
+
+        default:
+            return state
+    }
+}
 
 
 /* Creating event */
@@ -20,7 +47,6 @@ const initialEventState = {
 export const eventReducer = (state = initialEventState, action) => {
     switch(action.type){
         case ADD_EVENT:
-            console.log('test')
             return (
                 {
                     ...state,
