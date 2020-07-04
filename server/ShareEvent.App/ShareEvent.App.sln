@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.App", "ShareEvent.App.csproj", "{3439166B-13F3-48F2-BEA9-280C73232387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.Tests", "..\ShareEvent.Tests\ShareEvent.Tests.csproj", "{E022A863-F085-4341-9633-1CA637215791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.Repository", "..\ShareEvent.Repository\ShareEvent.Repository.csproj", "{B21333CB-6FEB-41D3-AA44-B30DDC918C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.Services", "..\ShareEvent.Services\ShareEvent.Services.csproj", "{EF8931DD-E26D-4B19-BA41-370D0018CC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.DataAccess", "..\ShareEvent.DataAccess\ShareEvent.DataAccess.csproj", "{5128315A-83C2-446E-96BB-C60EBD365E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareEvent.Models", "..\ShareEvent.Models\ShareEvent.Models.csproj", "{8F6623EB-6D31-4213-BC34-12DEC32187B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3439166B-13F3-48F2-BEA9-280C73232387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3439166B-13F3-48F2-BEA9-280C73232387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3439166B-13F3-48F2-BEA9-280C73232387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3439166B-13F3-48F2-BEA9-280C73232387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E022A863-F085-4341-9633-1CA637215791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E022A863-F085-4341-9633-1CA637215791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E022A863-F085-4341-9633-1CA637215791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E022A863-F085-4341-9633-1CA637215791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21333CB-6FEB-41D3-AA44-B30DDC918C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21333CB-6FEB-41D3-AA44-B30DDC918C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21333CB-6FEB-41D3-AA44-B30DDC918C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21333CB-6FEB-41D3-AA44-B30DDC918C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8931DD-E26D-4B19-BA41-370D0018CC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8931DD-E26D-4B19-BA41-370D0018CC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8931DD-E26D-4B19-BA41-370D0018CC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8931DD-E26D-4B19-BA41-370D0018CC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5128315A-83C2-446E-96BB-C60EBD365E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5128315A-83C2-446E-96BB-C60EBD365E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5128315A-83C2-446E-96BB-C60EBD365E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5128315A-83C2-446E-96BB-C60EBD365E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6623EB-6D31-4213-BC34-12DEC32187B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6623EB-6D31-4213-BC34-12DEC32187B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6623EB-6D31-4213-BC34-12DEC32187B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6623EB-6D31-4213-BC34-12DEC32187B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65DF6AB5-A09A-4C86-99B6-C39EDACA6EC7}
+	EndGlobalSection
+EndGlobal
