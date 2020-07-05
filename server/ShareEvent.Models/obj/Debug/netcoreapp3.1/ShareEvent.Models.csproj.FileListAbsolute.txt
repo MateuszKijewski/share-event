@@ -1,8 +1,0 @@
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\bin\Debug\netcoreapp3.1\ShareEvent.Models.deps.json
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\bin\Debug\netcoreapp3.1\ShareEvent.Models.dll
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\bin\Debug\netcoreapp3.1\ShareEvent.Models.pdb
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\obj\Debug\netcoreapp3.1\ShareEvent.Models.csprojAssemblyReference.cache
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\obj\Debug\netcoreapp3.1\ShareEvent.Models.AssemblyInfoInputs.cache
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\obj\Debug\netcoreapp3.1\ShareEvent.Models.AssemblyInfo.cs
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\obj\Debug\netcoreapp3.1\ShareEvent.Models.dll
-G:\Programowanie\Projects\share-event\server\ShareEvent.Models\obj\Debug\netcoreapp3.1\ShareEvent.Models.pdb
