@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShareEvent.DataAccess\ShareEvent.DataAccess.csproj" />
+    <ProjectReference Include="..\ShareEvent.Models\ShareEvent.Models.csproj" />
   </ItemGroup>
 
 </Project>

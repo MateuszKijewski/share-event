@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ShareEvent.DataAccess;
+using ShareEvent.Models.Converters;
+using ShareEvent.Models.Converters.Interfaces;
 
 namespace ShareEvent.App
 {
@@ -30,6 +32,11 @@ namespace ShareEvent.App
             services.AddDbContext<ShareEventDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            // Converters
+            services.AddSingleton<IEventConverter, EventConverter>();
+            services.AddSingleton<ITicketTypeConverter, TicketTypeConverter>();
+            services.AddSingleton<IReservationConverter, ReservationConverter>();
 
             services.AddControllers();
         }

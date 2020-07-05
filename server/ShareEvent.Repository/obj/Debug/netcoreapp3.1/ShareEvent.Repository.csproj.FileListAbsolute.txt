@@ -1,0 +1,13 @@
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.DataAccess.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.Models.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.csprojAssemblyReference.cache
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.AssemblyInfoInputs.cache
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.AssemblyInfo.cs
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.Repository.deps.json
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.Repository.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.Repository.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.DataAccess.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\bin\Debug\netcoreapp3.1\ShareEvent.Models.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.csproj.CopyComplete
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Repository\obj\Debug\netcoreapp3.1\ShareEvent.Repository.pdb

@@ -1,0 +1,8 @@
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Services.deps.json
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Services.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Services.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.csprojAssemblyReference.cache
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.AssemblyInfoInputs.cache
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.AssemblyInfo.cs
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.pdb

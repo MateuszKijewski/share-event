@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
+using ShareEvent.Models.Converters.Interfaces;
 using ShareEvent.Models.DTOs.AddDTOs;
 using ShareEvent.Models.DTOs.GetDTOs;
 using ShareEvent.Models.Entities;
 
-namespace ShareEvent.Models.Converters.Interfaces
+namespace ShareEvent.Models.Converters
 {
     public class TicketTypeConverter : ITicketTypeConverter
     {
