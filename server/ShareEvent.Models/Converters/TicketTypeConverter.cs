@@ -8,13 +8,10 @@ namespace ShareEvent.Models.Converters
 {
     public class TicketTypeConverter : ITicketTypeConverter
     {
-        private readonly IEventConverter _eventConverter;
         private readonly IReservationConverter _reservationConverter;
 
-        public TicketTypeConverter(IEventConverter eventConverter,
-                                    IReservationConverter reservationConverter)
+        public TicketTypeConverter(IReservationConverter reservationConverter)
         {
-            _eventConverter = eventConverter;
             _reservationConverter = reservationConverter;
         }
 
@@ -27,7 +24,6 @@ namespace ShareEvent.Models.Converters
                 Price = ticketType.Price,
                 NumberAvailable = ticketType.NumberAvailable,
                 EventId = ticketType.EventId,
-                Event = _eventConverter.EventToGetEventDto(ticketType.Event),
                 Reservations = ticketType.Reservations
                     .Select(r => _reservationConverter.ReservationToGetReservationDto(r))
             };

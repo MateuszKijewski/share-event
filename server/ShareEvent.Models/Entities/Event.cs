@@ -12,6 +12,6 @@ namespace ShareEvent.Models.Entities
         public int NumberOfTickets { get; set; }
         public DateTime Date { get; set; }
 
-        public IEnumerable<TicketType> TicketTypes { get; set; }
+        public IEnumerable<TicketType>? TicketTypes { get; set; }
     }
 }

@@ -19,6 +19,10 @@ namespace ShareEvent.Models.Converters
 
         public GetEventDto EventToGetEventDto(Event eventEntity)
         {
+            var ticketTypes = eventEntity.TicketTypes != null
+                ? eventEntity.TicketTypes.Select(tt => _ticketTypeConverter.TicketTypeToGetTicketTypeDto(tt))
+                : new List<GetTicketTypeDto>(); 
+
             return new GetEventDto()
             {
                 EventId = eventEntity.EventId,
@@ -26,8 +30,7 @@ namespace ShareEvent.Models.Converters
                 Location = eventEntity.Location,
                 NumberOfTickets = eventEntity.NumberOfTickets,
                 Date = eventEntity.Date,
-                TicketTypes = eventEntity.TicketTypes
-                    .Select(tt => _ticketTypeConverter.TicketTypeToGetTicketTypeDto(tt))
+                TicketTypes = ticketTypes
             };
         }
 

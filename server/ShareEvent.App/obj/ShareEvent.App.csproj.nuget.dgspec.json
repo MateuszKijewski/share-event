@@ -29,6 +29,12 @@
             "projectReferences": {
               "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.DataAccess\\ShareEvent.DataAccess.csproj": {
                 "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.DataAccess\\ShareEvent.DataAccess.csproj"
+              },
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj"
+              },
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\ShareEvent.Services.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\ShareEvent.Services.csproj"
               }
             }
           }
@@ -42,6 +48,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -51,6 +61,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
             }
           },
           "imports": [
@@ -180,6 +198,130 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj",
+        "projectName": "ShareEvent.Repository",
+        "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj",
+        "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
+        "outputPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.DataAccess\\ShareEvent.DataAccess.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.DataAccess\\ShareEvent.DataAccess.csproj"
+              },
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Models\\ShareEvent.Models.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Models\\ShareEvent.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\ShareEvent.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\ShareEvent.Services.csproj",
+        "projectName": "ShareEvent.Services",
+        "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\ShareEvent.Services.csproj",
+        "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
+        "outputPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Models\\ShareEvent.Models.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Models\\ShareEvent.Models.csproj"
+              },
+              "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj": {
+                "projectPath": "G:\\Programowanie\\Projects\\share-event\\server\\ShareEvent.Repository\\ShareEvent.Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

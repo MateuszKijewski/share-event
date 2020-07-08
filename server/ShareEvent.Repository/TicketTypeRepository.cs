@@ -31,12 +31,12 @@ namespace ShareEvent.Repository
             throw new KeyNotFoundException();
         }
 
-        public async Task<Guid> AddAsync(TicketType ticketType)
+        public async Task<bool> AddAsync(TicketType ticketType)
         {
             await _db.TicketTypes.AddAsync(ticketType);
-            await _db.SaveChangesAsync();
+            var created = await _db.SaveChangesAsync();
 
-            return ticketType.TicketTypeId;
+            return created > 0;
         }
 
         public async Task<IEnumerable<TicketType>> ListAsync()

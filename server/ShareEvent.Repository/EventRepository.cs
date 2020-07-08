@@ -32,12 +32,12 @@ namespace ShareEvent.Repository
             throw new KeyNotFoundException();
         }
 
-        public async Task<Guid> AddAsync(Event eventEntity)
+        public async Task<bool> AddAsync(Event eventEntity)
         {
             await _db.Events.AddAsync(eventEntity);
-            await _db.SaveChangesAsync();
+            var created = await _db.SaveChangesAsync();
 
-            return eventEntity.EventId;
+            return created > 0;
         }
 
         public async Task<IEnumerable<Event>> ListAsync()

@@ -11,9 +11,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using ShareEvent.DataAccess;
 using ShareEvent.Models.Converters;
 using ShareEvent.Models.Converters.Interfaces;
+using ShareEvent.Repository;
+using ShareEvent.Repository.Interfaces;
+using ShareEvent.Services;
+using ShareEvent.Services.Interfaces;
+
 
 namespace ShareEvent.App
 {
@@ -38,7 +44,40 @@ namespace ShareEvent.App
             services.AddSingleton<ITicketTypeConverter, TicketTypeConverter>();
             services.AddSingleton<IReservationConverter, ReservationConverter>();
 
-            services.AddControllers();
+            // Repositories
+            services.AddTransient<IEventRepository, EventRepository>();
+            services.AddTransient<ITicketTypeRepository, TicketTypeRepository>();
+            services.AddTransient<IReservationRepository, ReservationRepository>();
+
+            // Services
+            services.AddTransient<IEventGuestService, EventGuestService>();
+            services.AddTransient<IEventHostService, EventHostService>();
+
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            // Swagger
+            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "ShareEvent API",
+                    Description = "ASP .NET Core API for creating and sharing various events",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Mateusz Kijewski",
+                        Email = "mateuszkijewski2307@gmail.com"
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under MIT license",
+                        Url = new Uri("https://www.mit.edu/~amini/LICENSE.md"),
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +87,13 @@ namespace ShareEvent.App
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ShareEventAPI v1.0");
+            });
 
             app.UseHttpsRedirection();
 

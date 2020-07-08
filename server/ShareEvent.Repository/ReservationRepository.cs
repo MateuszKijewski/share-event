@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -31,12 +32,12 @@ namespace ShareEvent.Repository
             throw new KeyNotFoundException();
         }
 
-        public async Task<Guid> AddAsync(Reservation reservation)
+        public async Task<bool> AddAsync(Reservation reservation)
         {
             await _db.AddAsync(reservation);
-            await _db.SaveChangesAsync();
+            var created = await _db.SaveChangesAsync();
 
-            throw new KeyNotFoundException();
+            return created > 0;
         }
 
         public async Task<IEnumerable<Reservation>> ListAsync()

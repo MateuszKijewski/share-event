@@ -10,7 +10,7 @@ namespace ShareEvent.Repository.Interfaces
     public interface IReservationRepository
     {
         Task<Reservation> GetAsync(Guid reservationId);
-        Task<Guid> AddAsync(Reservation reservation);
+        Task<bool> AddAsync(Reservation reservation);
         Task<IEnumerable<Reservation>> ListAsync();
     }
 }

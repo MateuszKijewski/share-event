@@ -25,6 +25,10 @@ namespace ShareEvent.Models.DTOs.AddDTOs
         [Required]
         [MaxLength(20)]
         public string PhoneNumber { get; set; }
+
+        [Required]
+        [Range(1, Int32.MaxValue)]
+        public int ReservedQuantity { get; set; }
         
         [Required]
         public Guid TicketTypeId { get; set; }

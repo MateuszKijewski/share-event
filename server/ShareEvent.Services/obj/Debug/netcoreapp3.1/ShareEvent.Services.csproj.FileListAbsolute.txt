@@ -6,3 +6,10 @@ G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netco
 G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.AssemblyInfo.cs
 G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.DataAccess.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Models.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Repository.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Models.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.Repository.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\bin\Debug\netcoreapp3.1\ShareEvent.DataAccess.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Services\obj\Debug\netcoreapp3.1\ShareEvent.Services.csproj.CopyComplete

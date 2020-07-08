@@ -10,12 +10,6 @@ namespace ShareEvent.Models.Converters
 {
     public class ReservationConverter : IReservationConverter
     {
-        private readonly ITicketTypeConverter _ticketTypeConverter;
-
-        public ReservationConverter(ITicketTypeConverter ticketTypeConverter)
-        {
-            _ticketTypeConverter = ticketTypeConverter;
-        }
 
         public GetReservationDto ReservationToGetReservationDto(Reservation reservation)
         {
@@ -26,8 +20,7 @@ namespace ShareEvent.Models.Converters
                 LastName = reservation.LastName,
                 Email = reservation.Email,
                 PhoneNumber = reservation.PhoneNumber,
-                TicketTypeId = reservation.TicketTypeId,
-                TicketType = _ticketTypeConverter.TicketTypeToGetTicketTypeDto(reservation.TicketType)
+                ReservedQuantity = reservation.ReservedQuantity
             };
         }
 
@@ -40,7 +33,8 @@ namespace ShareEvent.Models.Converters
                 LastName = addReservationDto.LastName,
                 Email = addReservationDto.Email,
                 PhoneNumber = addReservationDto.PhoneNumber,
-                TicketTypeId = addReservationDto.TicketTypeId
+                TicketTypeId = addReservationDto.TicketTypeId,
+                ReservedQuantity = addReservationDto.ReservedQuantity
             };
         }
     }

@@ -9,7 +9,7 @@ namespace ShareEvent.Repository.Interfaces
     public interface ITicketTypeRepository
     {
         Task<TicketType> GetAsync(Guid ticketTypeId);
-        Task<Guid> AddAsync(TicketType ticketType);
+        Task<bool> AddAsync(TicketType ticketType);
         Task<IEnumerable<TicketType>> ListAsync();
     }
 }

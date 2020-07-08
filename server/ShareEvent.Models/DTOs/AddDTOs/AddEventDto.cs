@@ -19,7 +19,7 @@ namespace ShareEvent.Models.DTOs.AddDTOs
         public string Location { get; set; }
 
         [Required]
-        [Range(0, Int32.MaxValue)]
+        [Range(1, Int32.MaxValue)]
         public int NumberOfTickets { get; set; }
 
         [Required]

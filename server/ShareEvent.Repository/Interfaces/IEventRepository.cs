@@ -9,7 +9,7 @@ namespace ShareEvent.Repository.Interfaces
     public interface IEventRepository
     {
         Task<Event> GetAsync(Guid eventId);
-        Task<Guid> AddAsync(Event eventEntity);
+        Task<bool> AddAsync(Event eventEntity);
         Task<IEnumerable<Event>> ListAsync();
     }
 }

@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\ShareEvent.Models\ShareEvent.Models.csproj" />
+    <ProjectReference Include="..\ShareEvent.Repository\ShareEvent.Repository.csproj" />
   </ItemGroup>
 
 </Project>
