@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using ShareEvent.Models.Converters.Interfaces;
 using ShareEvent.Models.DTOs.AddDTOs;
 using ShareEvent.Models.DTOs.GetDTOs;
@@ -17,6 +18,10 @@ namespace ShareEvent.Models.Converters
 
         public GetTicketTypeDto TicketTypeToGetTicketTypeDto(TicketType ticketType)
         {
+            var reservations = ticketType.Reservations != null
+                ? ticketType.Reservations.Select(r => _reservationConverter.ReservationToGetReservationDto(r))
+                : new List<GetReservationDto>();
+
             return new GetTicketTypeDto()
             {
                 TicketTypeId = ticketType.TicketTypeId,
@@ -24,8 +29,7 @@ namespace ShareEvent.Models.Converters
                 Price = ticketType.Price,
                 NumberAvailable = ticketType.NumberAvailable,
                 EventId = ticketType.EventId,
-                Reservations = ticketType.Reservations
-                    .Select(r => _reservationConverter.ReservationToGetReservationDto(r))
+                Reservations = reservations
             };
         }
 

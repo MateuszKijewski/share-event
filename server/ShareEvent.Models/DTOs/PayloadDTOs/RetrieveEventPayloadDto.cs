@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ShareEvent.Models.DTOs.GetDTOs;
 
-namespace ShareEvent.Models.DTOs.GetDTOs
+namespace ShareEvent.Models.DTOs.PayloadDTOs
 {
     public class RetrieveEventPayloadDto
     {
         public GetEventDto GetEventDto { get; set; }
-        public IEnumerable<GetTicketTypeDto> GetTicketTypeDtos { get; set; }
     }
 }

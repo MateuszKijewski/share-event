@@ -22,8 +22,8 @@ namespace ShareEvent.Repository
         public async Task<Event> GetAsync(Guid eventId)
         {
             var requestedEvent = await _db.Events
-                .Include(e => e.TicketTypes ?? new List<TicketType>())
-                .ThenInclude(tt => tt.Reservations ?? new List<Reservation>())
+                .Include(e => e.TicketTypes)
+                .ThenInclude(tt => tt.Reservations)
                 .FirstOrDefaultAsync(e => e.EventId == eventId);
             if (requestedEvent != null)
             {

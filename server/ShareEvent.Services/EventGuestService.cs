@@ -32,12 +32,10 @@ namespace ShareEvent.Services
         {
             var requestedEvent = _eventConverter
                 .EventToGetEventDto(await _eventRepository.GetAsync(eventId));
-            var requestedTicketTypes = requestedEvent.TicketTypes;
 
             return new RetrieveEventPayloadDto()
             {
-                GetEventDto = requestedEvent,
-                GetTicketTypeDtos = requestedTicketTypes
+                GetEventDto = requestedEvent
             };
         }
 

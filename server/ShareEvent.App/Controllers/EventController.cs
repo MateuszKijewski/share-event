@@ -11,10 +11,13 @@ namespace ShareEvent.App.Controllers
     public class EventController : Controller
     {
         private readonly IEventHostService _eventHostService;
+        private readonly IEventGuestService _eventGuestService;
 
-        public EventController(IEventHostService eventHostService)
+        public EventController(IEventHostService eventHostService,
+                            IEventGuestService eventGuestService)
         {
             _eventHostService = eventHostService;
+            _eventGuestService = eventGuestService;
         }
 
         [HttpPost(ApiRoutes.Events.Confirm)]
@@ -33,6 +36,20 @@ namespace ShareEvent.App.Controllers
             catch (Exception e)
             {
                 return BadRequest(e);
+            }
+        }
+
+        [HttpGet(ApiRoutes.Events.Retrieve)]
+        public async Task<IActionResult> Retrieve([FromRoute]Guid eventId)
+        {
+            try
+            {
+                var requestedEventWithTicketTypes = await _eventGuestService.RetrieveEvent(eventId);
+                return Ok(requestedEventWithTicketTypes);
+            }
+            catch (Exception e)
+            {
+                return NotFound(e);
             }
         }
     }
