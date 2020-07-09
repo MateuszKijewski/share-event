@@ -13,6 +13,7 @@ namespace ShareEvent.App
         {
             public const string Confirm = Root + "/event";
             public const string Retrieve = Root + "/event/{eventId}";
+            public const string Reserve = Root + "/event/{eventId}/reserve";
         }
     }
 }

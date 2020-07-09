@@ -34,8 +34,9 @@ namespace ShareEvent.Repository
 
         public async Task<bool> AddAsync(Reservation reservation)
         {
-            await _db.AddAsync(reservation);
+            await _db.Reservations.AddAsync(reservation);
             var created = await _db.SaveChangesAsync();
+            _db.Entry(reservation).State = EntityState.Detached;
 
             return created > 0;
         }

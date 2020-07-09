@@ -10,6 +10,7 @@ namespace ShareEvent.Services.Interfaces
     public interface IEventGuestService
     {
         Task<RetrieveEventPayloadDto> RetrieveEvent(Guid eventId);
-        Task<IEnumerable<Guid>> ReserveTickets(ConfirmReservationsPayloadDto confirmReservationsPayloadDto);
+        Task<IEnumerable<GetReservationDto>> ReserveTickets(ConfirmReservationsPayloadDto confirmReservationsPayloadDto);
     }
 }
+//3fa85f64-5717-4562-b3fc-2c963f66afa6

@@ -39,9 +39,9 @@ namespace ShareEvent.Services
             };
         }
 
-        public async Task<IEnumerable<Guid>> ReserveTickets(ConfirmReservationsPayloadDto confirmReservationsPayloadDto)
+        public async Task<IEnumerable<GetReservationDto>> ReserveTickets(ConfirmReservationsPayloadDto confirmReservationsPayloadDto)
         {
-            var createdReservationsIds = new List<Guid>();
+            var createdReservations = new List<GetReservationDto>();
             foreach (var addReservationDto in confirmReservationsPayloadDto.AddReservationDtos)
             {
                 var reservationCreated=
@@ -52,10 +52,12 @@ namespace ShareEvent.Services
                 {
                     throw new Exception("Failed to create reservation");
                 }
-                createdReservationsIds.Add(addReservationDto.ReservationId);
+                createdReservations.Add(_reservationConverter
+                    .ReservationToGetReservationDto(_reservationConverter
+                    .AddReservationDtoToReservation(addReservationDto)));
             }
 
-            return createdReservationsIds;
+            return createdReservations;
         }
     }
 }

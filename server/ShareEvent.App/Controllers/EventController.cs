@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShareEvent.Models.DTOs.AddDTOs;
+using ShareEvent.Models.DTOs.PayloadDTOs;
 using ShareEvent.Services.Interfaces;
 
 namespace ShareEvent.App.Controllers
@@ -50,6 +51,23 @@ namespace ShareEvent.App.Controllers
             catch (Exception e)
             {
                 return NotFound(e);
+            }
+        }
+
+        [HttpPost(ApiRoutes.Events.Reserve)]
+        public async Task<IActionResult> Reserve([FromBody] ConfirmReservationsPayloadDto confirmReservationsPayloadDto)
+        {
+            try
+            {
+                var createdReservations = await _eventGuestService.ReserveTickets(confirmReservationsPayloadDto);
+
+                var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
+
+                return Created(baseUrl, createdReservations);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
             }
         }
     }

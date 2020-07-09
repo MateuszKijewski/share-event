@@ -35,6 +35,7 @@ namespace ShareEvent.Repository
         {
             await _db.TicketTypes.AddAsync(ticketType);
             var created = await _db.SaveChangesAsync();
+            _db.Entry(ticketType).State = EntityState.Detached;
 
             return created > 0;
         }
