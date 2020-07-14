@@ -126,7 +126,6 @@ G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcorea
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Moq.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -142,3 +141,12 @@ G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcorea
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\ShareEvent.Models.pdb
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\ShareEvent.Repository.pdb
 G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\ShareEvent.Services.pdb
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll

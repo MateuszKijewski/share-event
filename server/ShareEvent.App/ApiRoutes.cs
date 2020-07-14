@@ -15,5 +15,11 @@ namespace ShareEvent.App
             public const string Retrieve = Root + "/event/{eventId}";
             public const string Reserve = Root + "/event/{eventId}/reserve";
         }
+
+        public static class Users
+        {
+            public const string Authenticate = Root + "/user/authenticate";
+            public const string Secret = Root + "/user/secret";
+        }
     }
 }

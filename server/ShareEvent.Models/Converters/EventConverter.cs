@@ -27,6 +27,7 @@ namespace ShareEvent.Models.Converters
             {
                 EventId = eventEntity.EventId,
                 Name = eventEntity.Name,
+                Description = eventEntity.Description,
                 Location = eventEntity.Location,
                 NumberOfTickets = eventEntity.NumberOfTickets,
                 Date = eventEntity.Date,
@@ -40,6 +41,7 @@ namespace ShareEvent.Models.Converters
             {
                 EventId = addEventDto.EventId,
                 Name = addEventDto.Name,
+                Description = addEventDto.Description,
                 Location = addEventDto.Location,
                 NumberOfTickets = addEventDto.NumberOfTickets,
                 Date = addEventDto.Date

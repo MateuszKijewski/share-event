@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using ShareEvent.Models.Converters.Interfaces;
+using ShareEvent.Models.DTOs.Contracts.Requests;
+using ShareEvent.Models.DTOs.Contracts.Responses;
 using ShareEvent.Models.DTOs.GetDTOs;
-using ShareEvent.Models.DTOs.PayloadDTOs;
 using ShareEvent.Repository.Interfaces;
 using ShareEvent.Services.Interfaces;
 
@@ -28,18 +29,18 @@ namespace ShareEvent.Services
             _reservationRepository = reservationRepository;
         }
 
-        public async Task<RetrieveEventPayloadDto> RetrieveEvent(Guid eventId)
+        public async Task<RetrieveEventResponse> RetrieveEvent(Guid eventId)
         {
             var requestedEvent = _eventConverter
                 .EventToGetEventDto(await _eventRepository.GetAsync(eventId));
 
-            return new RetrieveEventPayloadDto()
+            return new RetrieveEventResponse()
             {
                 GetEventDto = requestedEvent
             };
         }
 
-        public async Task<IEnumerable<GetReservationDto>> ReserveTickets(ConfirmReservationsPayloadDto confirmReservationsPayloadDto)
+        public async Task<IEnumerable<GetReservationDto>> ReserveTickets(CreateReservationsRequest confirmReservationsPayloadDto)
         {
             var createdReservations = new List<GetReservationDto>();
             foreach (var addReservationDto in confirmReservationsPayloadDto.AddReservationDtos)

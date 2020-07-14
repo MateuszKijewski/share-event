@@ -1,5 +1,5 @@
 import React from 'react'
-import { GENERATE_LINK } from '../redux/actionTypes'
+import { GENERATE_LINK } from '../../redux/actionTypes'
 
 function SharedLink({eventId}) {
     const getLink = () => (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
+import Header from './components/Event/Header'
 import ReservationHeader from './components/Reservation/ReservationHeader'
 import { Provider } from 'react-redux';
 import Store from './redux/store'
@@ -9,7 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 import ModalContainer from './components/ModalContainer'
-import ReservationModalContainer from './components/Reservation/ReservationModalContainer';
+import ReservationModalContainer from './components/ReservationModalContainer';
 
 
 export class App extends Component {
@@ -19,8 +19,8 @@ export class App extends Component {
 
       return(
         <React.StrictMode>
-          <ReservationHeader id={id}/>
-          <ReservationModalContainer />
+          <ReservationHeader />
+          <ReservationModalContainer eventId={id} />
         </React.StrictMode>
       )
     }    

@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CreateEvent from './CreateEvent'
-import CreateTicketTypes from './CreateTicketTypes'
-import SharedLink from './SharedLink'
+import CreateEvent from './Event/CreateEvent'
+import CreateTicketTypes from './Event/CreateTicketTypes'
+import SharedLink from './Event/SharedLink'
 import { addEvent, addTicketType, switchModal, deleteTicketType, apiCreateEvent } from '../redux/actions'
 
 function ModalContainer({event, visibleModal, ticketTypes, addEvent, addTicketType, deleteTicketType, switchModal, apiCreateEvent, apiResponses}) {

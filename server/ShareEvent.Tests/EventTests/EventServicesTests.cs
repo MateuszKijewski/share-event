@@ -7,6 +7,7 @@ using iReception.Test;
 using Moq;
 using ShareEvent.Models.Converters.Interfaces;
 using ShareEvent.Models.DTOs.AddDTOs;
+using ShareEvent.Models.DTOs.Contracts.Requests;
 using ShareEvent.Models.DTOs.GetDTOs;
 using ShareEvent.Models.Entities;
 using ShareEvent.Repository.Interfaces;
@@ -82,7 +83,7 @@ namespace ShareEvent.Tests.EventTests
                 ticketTypeRepositoryMock.Object);
 
             
-            var request = new ConfirmEventPayloadDto()
+            var request = new CreateEventRequest()
             {
                 AddEventDto = testEvent,
                 AddTicketTypeDtos = new List<AddTicketTypeDto>()

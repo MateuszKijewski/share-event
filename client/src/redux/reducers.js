@@ -2,25 +2,23 @@ import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE, SWITCH_MODAL } from './
 import { EVENT } from './actionTypes'
 import { ADD_RESERVED_AMOUNT, ADD_CONTACT_INFO, SWITCH_RESERVATION_MODAL} from './actionTypes'
 import { RESERVATION } from './actionTypes'
-import { API_CREATE_EVENT } from './actionTypes'
+import { API_CREATE_EVENT, API_RETRIEVE_EVENT } from './actionTypes'
 
 /* API calls */
-const initialResponseState = {
+const initialCreateResponseState = {
     apiResponses: {
-        createEventResponse: {},
-        createTicketResponses: []
+        createEventResponse: {}
     }
 }
 
-export const apiCreateEventReducer = (state = initialResponseState, action) => {
+export const apiCreateEventReducer = (state = initialCreateResponseState, action) => {
     switch(action.type){
         case API_CREATE_EVENT:
             return (
                 {
                     ...state,
                     apiResponses: {
-                        createEventResponse: action.payload.createEventResponse,
-                        createTicketResponses: action.payload.createTicketResponses
+                        createEventResponse: action.payload.createEventResponse
                     }
                 }
             )
@@ -30,6 +28,29 @@ export const apiCreateEventReducer = (state = initialResponseState, action) => {
     }
 }
 
+const initialRetrieveResponseState = {
+    apiResponse: {
+        retrieveEventResponse: {}
+    }
+}
+
+export const apiRetrieveEventReducer = (state = initialRetrieveResponseState, action) => {
+    switch(action.type){
+        case API_RETRIEVE_EVENT:
+            console.log(action)
+            return (
+                {
+                    ...state,
+                    apiResponses: {
+                        retrieveEventResponse: action.payload.retrieveEventResponse
+                    }
+                }
+            )
+            
+            default:
+                return state
+    }
+}
 
 /* Creating event */
 

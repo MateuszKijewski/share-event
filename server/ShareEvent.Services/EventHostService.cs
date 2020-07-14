@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ShareEvent.Models.Converters.Interfaces;
 using ShareEvent.Models.DTOs.AddDTOs;
+using ShareEvent.Models.DTOs.Contracts.Requests;
 using ShareEvent.Models.DTOs.GetDTOs;
 using ShareEvent.Repository.Interfaces;
 using ShareEvent.Services.Interfaces;
@@ -28,7 +29,7 @@ namespace ShareEvent.Services
             _ticketTypeRepository = ticketTypeRepository;
         }
 
-        public async Task<GetEventDto> ConfirmEvent(ConfirmEventPayloadDto confirmEventPayloadDto)
+        public async Task<GetEventDto> ConfirmEvent(CreateEventRequest confirmEventPayloadDto)
         {
             var eventPayload = confirmEventPayloadDto.AddEventDto;
             var createdEvent = _eventConverter

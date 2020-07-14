@@ -1,8 +1,8 @@
 ﻿using ShareEvent.Models.DTOs.GetDTOs;
 
-namespace ShareEvent.Models.DTOs.PayloadDTOs
+namespace ShareEvent.Models.DTOs.Contracts.Responses
 {
-    public class RetrieveEventPayloadDto
+    public class RetrieveEventResponse
     {
         public GetEventDto GetEventDto { get; set; }
     }

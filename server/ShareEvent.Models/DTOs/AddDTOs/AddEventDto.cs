@@ -15,6 +15,10 @@ namespace ShareEvent.Models.DTOs.AddDTOs
         public string Name { get; set; }
 
         [Required]
+        [MaxLength(1000)]
+        public string Description { get; set; }
+
+        [Required]
         [MaxLength(255)]
         public string Location { get; set; }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ShareEvent.Models.DTOs.AddDTOs;
-using ShareEvent.Models.DTOs.PayloadDTOs;
+using ShareEvent.Models.DTOs.Contracts.Requests;
 using ShareEvent.Services.Interfaces;
 
 namespace ShareEvent.App.Controllers
@@ -22,7 +22,7 @@ namespace ShareEvent.App.Controllers
         }
 
         [HttpPost(ApiRoutes.Events.Confirm)]
-        public async Task<IActionResult> Confirm([FromBody] ConfirmEventPayloadDto confirmEventPayloadDto)
+        public async Task<IActionResult> Confirm([FromBody] CreateEventRequest confirmEventPayloadDto)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace ShareEvent.App.Controllers
         }
 
         [HttpPost(ApiRoutes.Events.Reserve)]
-        public async Task<IActionResult> Reserve([FromBody] ConfirmReservationsPayloadDto confirmReservationsPayloadDto)
+        public async Task<IActionResult> Reserve([FromBody] CreateReservationsRequest confirmReservationsPayloadDto)
         {
             try
             {

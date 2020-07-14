@@ -142,5 +142,14 @@ G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp
 G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 G:\Programowanie\Projects\share-event\server\ShareEvent.App\obj\Debug\netcoreapp3.1\ShareEvent.App.MvcApplicationPartsAssemblyInfo.cs
 G:\Programowanie\Projects\share-event\server\ShareEvent.App\obj\Debug\netcoreapp3.1\ShareEvent.App.MvcApplicationPartsAssemblyInfo.cache
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+G:\Programowanie\Projects\share-event\server\ShareEvent.App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll
