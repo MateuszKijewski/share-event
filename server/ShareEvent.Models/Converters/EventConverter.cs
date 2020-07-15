@@ -30,7 +30,7 @@ namespace ShareEvent.Models.Converters
                 Description = eventEntity.Description,
                 Location = eventEntity.Location,
                 NumberOfTickets = eventEntity.NumberOfTickets,
-                Date = eventEntity.Date,
+                Date = eventEntity.Date.ToString("d"),
                 TicketTypes = ticketTypes
             };
         }

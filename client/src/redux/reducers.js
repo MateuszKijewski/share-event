@@ -2,7 +2,8 @@ import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE, SWITCH_MODAL } from './
 import { EVENT } from './actionTypes'
 import { ADD_RESERVED_AMOUNT, ADD_CONTACT_INFO, SWITCH_RESERVATION_MODAL} from './actionTypes'
 import { RESERVATION } from './actionTypes'
-import { API_CREATE_EVENT, API_RETRIEVE_EVENT } from './actionTypes'
+import { API_CREATE_EVENT, API_RETRIEVE_EVENT, API_CREATE_RESERVATIONS } from './actionTypes'
+import {  } from 'uuid'
 
 /* API calls */
 const initialCreateResponseState = {
@@ -28,6 +29,28 @@ export const apiCreateEventReducer = (state = initialCreateResponseState, action
     }
 }
 
+const initialCreateReservationResponseState = {
+    apiResponses: {
+        createReservationResponse: {}
+    }
+}
+
+export const apiCreateReservationsReducer = (state = initialCreateReservationResponseState, action) => {
+    switch(action.type){
+        case API_CREATE_RESERVATIONS:
+            return (
+                {
+                    ...state,
+                    apiResponses: {
+                        createReservationsResponse: action.payload.createReservationsResponse
+                    }
+                }
+            )
+        default:
+            return state
+    }
+}
+
 const initialRetrieveResponseState = {
     apiResponse: {
         retrieveEventResponse: {}
@@ -37,7 +60,6 @@ const initialRetrieveResponseState = {
 export const apiRetrieveEventReducer = (state = initialRetrieveResponseState, action) => {
     switch(action.type){
         case API_RETRIEVE_EVENT:
-            console.log(action)
             return (
                 {
                     ...state,
@@ -148,10 +170,23 @@ const initialReservedAmountState = {
 export const reservedTicketsReducer = (state = initialReservedAmountState, action) => {
     switch(action.type){
         case ADD_RESERVED_AMOUNT:
+            var existingReservation = state.reservedTickets.filter((rt) => {
+                return rt.ticketTypeId === action.payload.ticketTypeId
+            })
+            if (existingReservation.length != 0) {
+                existingReservation[0].amount = action.payload.amount
+                return (
+                    {
+                        ...state,
+                        reservedTickets: [...state.reservedTickets]
+                    }
+                )
+            }
             return (
                 {
                     ...state,
                     reservedTickets: [...state.reservedTickets, {
+                        reservationId: action.payload.reservationId,
                         ticketTypeId: action.payload.ticketTypeId,
                         amount: action.payload.amount
                     }]

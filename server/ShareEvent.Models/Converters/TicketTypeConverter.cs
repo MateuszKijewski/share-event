@@ -26,6 +26,7 @@ namespace ShareEvent.Models.Converters
             {
                 TicketTypeId = ticketType.TicketTypeId,
                 Name = ticketType.Name,
+                Description = ticketType.Description,
                 Price = ticketType.Price,
                 NumberAvailable = ticketType.NumberAvailable,
                 EventId = ticketType.EventId,
@@ -39,6 +40,7 @@ namespace ShareEvent.Models.Converters
             {
                 TicketTypeId = addTicketTypeDto.TicketTypeId,
                 Name = addTicketTypeDto.Name,
+                Description = addTicketTypeDto.Description,
                 Price = addTicketTypeDto.Price,
                 NumberAvailable = addTicketTypeDto.NumberAvailable,
                 EventId = addTicketTypeDto.EventId

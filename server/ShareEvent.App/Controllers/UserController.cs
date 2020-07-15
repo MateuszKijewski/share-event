@@ -51,7 +51,7 @@ namespace ShareEvent.App.Controllers
         [Authorize(Roles = Role.Guest)]
         public IActionResult Test()
         {
-            var respone = new {test = "XDDDD"};
+            var respone = new {test = "test"};
 
             return Ok(respone);
         }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function ReservationContactInfo() {
+function ReservationContactInfo({addContactInfo, switchReservationModal}) {
     const [allValues, setAllValues] = useState({
         firstName: '',
         lastName: '',
@@ -23,13 +23,13 @@ function ReservationContactInfo() {
                     <label>First name</label>
                     <input type='text' name="firstName" className={'form-control'} onChange={changeHandler} />
                     <label className={'mt-2'}>Last name</label>
-                    <textarea name="lastName" className={'form-control'} onChange={changeHandler}/>
+                    <input name="lastName" className={'form-control'} onChange={changeHandler}/>
                     <label className={'mt-2'}>Email</label>
-                    <input name="location" type='text' className={'form-control'} onChange={changeHandler}/>
+                    <input name="email" type='text' className={'form-control'} onChange={changeHandler}/>
                     <label className={'mt-2'}>Phone number</label>
-                    <input type='text' name="phoneNUmber" className={'form-control'} onChange={changeHandler}/>
+                    <input type='text' name="phoneNumber" className={'form-control'} onChange={changeHandler}/>
                     <div className={'text-center mt-5'}>
-                        <button className={'btn btn-primary proceedButton'}><b>Proceed</b></button>
+                        <button className={'btn btn-primary proceedButton'} onClick={() => {addContactInfo(allValues); switchReservationModal('summary')}}><b>Proceed</b></button>
                     </div>
                 </div>
 			</div>

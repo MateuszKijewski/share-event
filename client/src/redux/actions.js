@@ -1,6 +1,6 @@
 import { ADD_EVENT, ADD_TICKET_TYPE, DELETE_TICKET_TYPE,SWITCH_MODAL } from './actionTypes'
 import { ADD_RESERVED_AMOUNT, ADD_CONTACT_INFO, SWITCH_RESERVATION_MODAL} from './actionTypes'
-import { API_CREATE_EVENT, API_RETRIEVE_EVENT } from './actionTypes'
+import { API_CREATE_EVENT, API_RETRIEVE_EVENT, API_CREATE_RESERVATIONS } from './actionTypes'
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios'
 
@@ -16,6 +16,7 @@ export const apiCreateEvent = (eventData, ticketTypeArray) => {
         ticketTypesObjects.push({
             ticketTypeId: ticketTypeData.id,
             name: ticketTypeData.name,
+            description: ticketTypeData.description,
             price: ticketTypeData.price,
             numberAvailable: ticketTypeData.numberAvailable,
             eventId: ticketTypeData.eventId
@@ -26,6 +27,7 @@ export const apiCreateEvent = (eventData, ticketTypeArray) => {
             
             addEventDto: {
                 eventId: eventData.id,
+                date: eventData.date,
                 name: eventData.name,
                 description: eventData.description,
                 location: eventData.location,
@@ -48,6 +50,44 @@ export const apiCreateEvent = (eventData, ticketTypeArray) => {
     }
 }
 
+export const apiCreateReservations = (reservationsArray, contactInfo, eventId) => {
+    let reservationObjects = []
+    console.log(reservationsArray)
+    reservationsArray.forEach((reservationData) => {
+        let properObject = {
+            ...reservationData,
+            ...contactInfo
+        }
+        reservationObjects.push({
+            reservationId: properObject.reservationId,
+            firstName: properObject.firstName,
+            lastName: properObject.lastName,
+            email: properObject.email,
+            phoneNumber: properObject.phoneNumber,
+            reservedQuantity: properObject.amount,
+            ticketTypeId: properObject.ticketTypeId
+        })
+    })
+    const createReservations = async () => {
+        let res = await api.post(`/event/${eventId}/reserve`, {
+            addReservationDtos: reservationObjects
+        })
+        return res
+    }
+
+    return (dispatch) => {
+        createReservations().then(res => {
+            dispatch({
+                type: API_CREATE_RESERVATIONS,
+                payload: {
+                    createReservationsResponse: res.data
+                }
+            })
+        })
+    }
+}
+
+
 export const apiRetrieveEvent = (eventId) => {
     const retrieveEvent = async (eventId) => {
         let res = await api.get(`/event/${eventId}`, {
@@ -61,7 +101,7 @@ export const apiRetrieveEvent = (eventId) => {
             dispatch({
                 type: API_RETRIEVE_EVENT,
                 payload: {
-                    retrieveEventResponse: res.data
+                    retrieveEventResponse: res.data,                    
                 }
             })
         })
@@ -125,6 +165,7 @@ export const addReservedAmount = (reservedAmountData) => (
     {
         type: ADD_RESERVED_AMOUNT,
         payload: {
+            reservationId: uuidv4(),
             ticketTypeId: reservedAmountData.ticketTypeId,
             amount: reservedAmountData.amount            
         }
